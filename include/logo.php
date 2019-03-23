@@ -1,0 +1,1 @@
+<a href="/" class="main-header__logo"><img width="160" alt="Логотип сайта" src="/upload/medialibrary/009/0096c32a28fde179320e54b7f6241539.png" height="39" title="Логотип компании YetiCave"></a>

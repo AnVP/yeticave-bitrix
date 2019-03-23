@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
+$APPLICATION->SetTitle("Главная");
 ?>
     <section class="promo">
       <h2 class="promo__title">Нужен стафф для катки?</h2>
