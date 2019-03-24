@@ -1,0 +1,1 @@
+<a href="add-lot.html" class="main-header__add-lot button">Добавить лот</a><br>
