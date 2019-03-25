@@ -1,0 +1,1 @@
+<a href="add-lot.php" class="main-footer__add-lot button">Добавить лот</a>

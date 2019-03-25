@@ -63,7 +63,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	
 	    <?$APPLICATION->IncludeComponent(
 		    "bitrix:system.auth.form",
-		    "",
+		    "user_menu",
 		    Array(
 			    "FORGOT_PASSWORD_URL" => "",
 			    "PROFILE_URL" => "",
@@ -71,16 +71,6 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 			    "SHOW_ERRORS" => "Y"
 		    )
 	    );?>
-
-        <!--<nav class="user-menu">
-            <div class="user-menu__image">
-                <img src="<?/*=SITE_TEMPLATE_PATH;*/?>/img/user.jpg" width="40" height="40" alt="Пользователь">
-            </div>
-            <div class="user-menu__logged">
-                <p>Константин</p>
-                <a href="login.html">Выйти</a>
-            </div>
-        </nav>-->
      
     </div>
   </header>
