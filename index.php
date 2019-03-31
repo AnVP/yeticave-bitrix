@@ -3,143 +3,171 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Главная");
 ?>
     <section class="promo">
-      <h2 class="promo__title">Нужен стафф для катки?</h2>
-      <p class="promo__text">На нашем интернет-аукционе ты найдёшь самое эксклюзивное сноубордическое и горнолыжное снаряжение.</p>
-      <ul class="promo__list">
-        <li class="promo__item promo__item--boards">
-          <a class="promo__link" href="all-lots.html">Доски и лыжи</a>
-        </li>
-        <li class="promo__item promo__item--attachment">
-          <a class="promo__link" href="all-lots.html">Крепления</a>
-        </li>
-        <li class="promo__item promo__item--boots">
-          <a class="promo__link" href="all-lots.html">Ботинки</a>
-        </li>
-        <li class="promo__item promo__item--clothing">
-          <a class="promo__link" href="all-lots.html">Одежда</a>
-        </li>
-        <li class="promo__item promo__item--tools">
-          <a class="promo__link" href="all-lots.html">Инструменты</a>
-        </li>
-        <li class="promo__item promo__item--other">
-          <a class="promo__link" href="all-lots.html">Разное</a>
-        </li>
-      </ul>
+	
+	    <?$APPLICATION->IncludeComponent(
+		    "bitrix:main.include",
+		    "",
+		    Array(
+			    "AREA_FILE_SHOW" => "page",
+			    "AREA_FILE_SUFFIX" => "inc",
+			    "EDIT_TEMPLATE" => ""
+		    )
+	    );?>
+	
+	    <?$APPLICATION->IncludeComponent(
+	"bitrix:catalog", 
+	"catalog_yeticave", 
+	array(
+		"ACTION_VARIABLE" => "action",
+		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_PICT_PROP" => "-",
+		"ADD_PROPERTIES_TO_BASKET" => "Y",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"BASKET_URL" => "/personal/basket.php",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"COMPATIBLE_MODE" => "Y",
+		"DETAIL_ADD_DETAIL_TO_SLIDER" => "N",
+		"DETAIL_BACKGROUND_IMAGE" => "-",
+		"DETAIL_BRAND_USE" => "N",
+		"DETAIL_BROWSER_TITLE" => "-",
+		"DETAIL_CHECK_SECTION_ID_VARIABLE" => "N",
+		"DETAIL_DETAIL_PICTURE_MODE" => array(
+			0 => "POPUP",
+			1 => "MAGNIFIER",
+		),
+		"DETAIL_DISPLAY_NAME" => "Y",
+		"DETAIL_DISPLAY_PREVIEW_TEXT_MODE" => "E",
+		"DETAIL_IMAGE_RESOLUTION" => "16by9",
+		"DETAIL_META_DESCRIPTION" => "-",
+		"DETAIL_META_KEYWORDS" => "-",
+		"DETAIL_PRODUCT_INFO_BLOCK_ORDER" => "sku,props",
+		"DETAIL_PRODUCT_PAY_BLOCK_ORDER" => "rating,price,priceRanges,quantityLimit,quantity,buttons",
+		"DETAIL_SET_CANONICAL_URL" => "N",
+		"DETAIL_SHOW_POPULAR" => "Y",
+		"DETAIL_SHOW_SLIDER" => "N",
+		"DETAIL_SHOW_VIEWED" => "Y",
+		"DETAIL_STRICT_SECTION_CHECK" => "N",
+		"DETAIL_USE_COMMENTS" => "N",
+		"DETAIL_USE_VOTE_RATING" => "N",
+		"DISABLE_INIT_JS_IN_COMPONENT" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"ELEMENT_SORT_FIELD" => "sort",
+		"ELEMENT_SORT_FIELD2" => "id",
+		"ELEMENT_SORT_ORDER" => "asc",
+		"ELEMENT_SORT_ORDER2" => "desc",
+		"FILTER_HIDE_ON_MOBILE" => "N",
+		"FILTER_VIEW_MODE" => "VERTICAL",
+		"IBLOCK_ID" => "1",
+		"IBLOCK_TYPE" => "catalog",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"INSTANT_RELOAD" => "N",
+		"LABEL_PROP" => "",
+		"LAZY_LOAD" => "N",
+		"LINE_ELEMENT_COUNT" => "3",
+		"LINK_ELEMENTS_URL" => "link.php?PARENT_ELEMENT_ID=#ELEMENT_ID#",
+		"LINK_IBLOCK_ID" => "",
+		"LINK_IBLOCK_TYPE" => "",
+		"LINK_PROPERTY_SID" => "",
+		"LIST_BROWSER_TITLE" => "-",
+		"LIST_ENLARGE_PRODUCT" => "STRICT",
+		"LIST_META_DESCRIPTION" => "-",
+		"LIST_META_KEYWORDS" => "-",
+		"LIST_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
+		"LIST_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
+		"LIST_SHOW_SLIDER" => "Y",
+		"LIST_SLIDER_INTERVAL" => "3000",
+		"LIST_SLIDER_PROGRESS" => "N",
+		"LOAD_ON_SCROLL" => "N",
+		"MESSAGE_404" => "",
+		"MESS_BTN_ADD_TO_BASKET" => "В корзину",
+		"MESS_BTN_BUY" => "Купить",
+		"MESS_BTN_COMPARE" => "Сравнение",
+		"MESS_BTN_DETAIL" => "Подробнее",
+		"MESS_BTN_SUBSCRIBE" => "Подписаться",
+		"MESS_NOT_AVAILABLE" => "Нет в наличии",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Товары",
+		"PAGE_ELEMENT_COUNT" => "30",
+		"PARTIAL_PRODUCT_PROPERTIES" => "N",
+		"PRICE_CODE" => array(
+		),
+		"PRICE_VAT_INCLUDE" => "Y",
+		"PRICE_VAT_SHOW_VALUE" => "N",
+		"PRODUCT_ID_VARIABLE" => "id",
+		"PRODUCT_PROPS_VARIABLE" => "prop",
+		"PRODUCT_QUANTITY_VARIABLE" => "quantity",
+		"SEARCH_CHECK_DATES" => "Y",
+		"SEARCH_NO_WORD_LOGIC" => "Y",
+		"SEARCH_PAGE_RESULT_COUNT" => "50",
+		"SEARCH_RESTART" => "N",
+		"SEARCH_USE_LANGUAGE_GUESS" => "Y",
+		"SECTIONS_SHOW_PARENT_NAME" => "Y",
+		"SECTIONS_VIEW_MODE" => "LIST",
+		"SECTION_BACKGROUND_IMAGE" => "-",
+		"SECTION_COUNT_ELEMENTS" => "Y",
+		"SECTION_ID_VARIABLE" => "SECTION_ID",
+		"SECTION_TOP_DEPTH" => "2",
+		"SEF_MODE" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "Y",
+		"SHOW_404" => "N",
+		"SHOW_DEACTIVATED" => "N",
+		"SHOW_PRICE_COUNT" => "1",
+		"SHOW_TOP_ELEMENTS" => "Y",
+		"SIDEBAR_DETAIL_SHOW" => "N",
+		"SIDEBAR_PATH" => "",
+		"SIDEBAR_SECTION_SHOW" => "Y",
+		"TEMPLATE_THEME" => "blue",
+		"TOP_ELEMENT_COUNT" => "9",
+		"TOP_ELEMENT_SORT_FIELD" => "sort",
+		"TOP_ELEMENT_SORT_FIELD2" => "id",
+		"TOP_ELEMENT_SORT_ORDER" => "asc",
+		"TOP_ELEMENT_SORT_ORDER2" => "desc",
+		"TOP_ENLARGE_PRODUCT" => "STRICT",
+		"TOP_LINE_ELEMENT_COUNT" => "3",
+		"TOP_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
+		"TOP_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
+		"TOP_SHOW_SLIDER" => "Y",
+		"TOP_SLIDER_INTERVAL" => "3000",
+		"TOP_SLIDER_PROGRESS" => "N",
+		"TOP_VIEW_MODE" => "SECTION",
+		"USER_CONSENT" => "N",
+		"USER_CONSENT_ID" => "0",
+		"USER_CONSENT_IS_CHECKED" => "Y",
+		"USER_CONSENT_IS_LOADED" => "N",
+		"USE_COMPARE" => "N",
+		"USE_ELEMENT_COUNTER" => "Y",
+		"USE_ENHANCED_ECOMMERCE" => "N",
+		"USE_FILTER" => "N",
+		"USE_MAIN_ELEMENT_SECTION" => "N",
+		"USE_PRICE_COUNT" => "N",
+		"USE_PRODUCT_QUANTITY" => "N",
+		"USE_REVIEW" => "N",
+		"USE_STORE" => "N",
+		"COMPONENT_TEMPLATE" => "catalog_yeticave",
+		"VARIABLE_ALIASES" => array(
+			"ELEMENT_ID" => "ELEMENT_ID",
+			"SECTION_ID" => "SECTION_ID",
+		)
+	),
+	false
+);?>
+     
     </section>
-    <section class="lots">
-      <div class="lots__header">
-        <h2>Открытые лоты</h2>
-      </div>
-      <ul class="lots__list">
-        <li class="lots__item lot">
-          <div class="lot__image">
-            <img src="<?=SITE_TEMPLATE_PATH;?>/img/lot-1.jpg" width="350" height="260" alt="Сноуборд">
-          </div>
-          <div class="lot__info">
-            <span class="lot__category">Доски и лыжи</span>
-            <h3 class="lot__title"><a class="text-link" href="lot.html">2014 Rossignol District Snowboard</a></h3>
-            <div class="lot__state">
-              <div class="lot__rate">
-                <span class="lot__amount">Стартовая цена</span>
-                <span class="lot__cost">10 999<b class="rub">р</b></span>
-              </div>
-              <div class="lot__timer timer">
-                16:54:12
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="lots__item lot">
-          <div class="lot__image">
-            <img src="<?=SITE_TEMPLATE_PATH;?>/img/lot-2.jpg" width="350" height="260" alt="Сноуборд">
-          </div>
-          <div class="lot__info">
-            <span class="lot__category">Доски и лыжи</span>
-            <h3 class="lot__title"><a class="text-link" href="lot.html">DC Ply Mens 2016/2017 Snowboard</a></h3>
-            <div class="lot__state">
-              <div class="lot__rate">
-                <span class="lot__amount">12 ставок</span>
-                <span class="lot__cost">15 999<b class="rub">р</b></span>
-              </div>
-              <div class="lot__timer timer timer--finishing">
-                00:54:12
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="lots__item lot">
-          <div class="lot__image">
-            <img src="<?=SITE_TEMPLATE_PATH;?>/img/lot-3.jpg" width="350" height="260" alt="Крепления">
-          </div>
-          <div class="lot__info">
-            <span class="lot__category">Крепления</span>
-            <h3 class="lot__title"><a class="text-link" href="lot.html">Крепления Union Contact Pro 2015 года размер L/XL</a></h3>
-            <div class="lot__state">
-              <div class="lot__rate">
-                <span class="lot__amount">7 ставок</span>
-                <span class="lot__cost">8 000<b class="rub">р</b></span>
-              </div>
-              <div class="lot__timer timer">
-                10:54:12
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="lots__item lot">
-          <div class="lot__image">
-            <img src="<?=SITE_TEMPLATE_PATH;?>/img/lot-4.jpg" width="350" height="260" alt="Ботинки">
-          </div>
-          <div class="lot__info">
-            <span class="lot__category">Ботинки</span>
-            <h3 class="lot__title"><a class="text-link" href="lot.html">Ботинки для сноуборда DC Mutiny Charocal</a></h3>
-            <div class="lot__state">
-              <div class="lot__rate">
-                <span class="lot__amount">12 ставок</span>
-                <span class="lot__cost">10 999<b class="rub">р</b></span>
-              </div>
-              <div class="lot__timer timer timer--finishing">
-                00:12:03
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="lots__item lot">
-          <div class="lot__image">
-            <img src="<?=SITE_TEMPLATE_PATH;?>/img/lot-5.jpg" width="350" height="260" alt="Куртка">
-          </div>
-          <div class="lot__info">
-            <span class="lot__category">Одежда</span>
-            <h3 class="lot__title"><a class="text-link" href="lot.html">Куртка для сноуборда DC Mutiny Charocal</a></h3>
-            <div class="lot__state">
-              <div class="lot__rate">
-                <span class="lot__amount">12 ставок</span>
-                <span class="lot__cost">10 999<b class="rub">р</b></span>
-              </div>
-              <div class="lot__timer timer">
-                00:12:03
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="lots__item lot">
-          <div class="lot__image">
-            <img src="<?=SITE_TEMPLATE_PATH;?>/img/lot-6.jpg" width="350" height="260" alt="Маска">
-          </div>
-          <div class="lot__info">
-            <span class="lot__category">Разное</span>
-            <h3 class="lot__title"><a class="text-link" href="lot.html">Маска Oakley Canopy</a></h3>
-            <div class="lot__state">
-              <div class="lot__rate">
-                <span class="lot__amount">Стартовая цена</span>
-                <span class="lot__cost">5 500<b class="rub">р</b></span>
-              </div>
-              <div class="lot__timer timer">
-                07:13:34
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </section>
-
+   
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
